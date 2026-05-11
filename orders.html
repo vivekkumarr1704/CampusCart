@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Orders</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+<h1>CampusCart</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="feedback.html">Feedback</a>
+<a href="cart.html">Cart</a>
+<a href="orders.html">Orders</a>
+</nav>
+</header>
+
+<h2 style="text-align:center;margin-top:30px;color:white">
+Order History
+</h2>
+
+<div id="orders"></div>
+
+<footer>
+<p>CampusCart © 2026 | Made for Students</p>
+</footer>
+
+<script>
+
+let orders = JSON.parse(localStorage.getItem("orders")) || []
+
+let div = document.getElementById("orders")
+
+if(orders.length === 0){
+div.innerHTML = "<p style='color:white;text-align:center'>No orders yet</p>"
+}
+
+orders.forEach(item=>{
+
+div.innerHTML += `
+<div class="product">
+<img src="${item.img}" width="120">
+<h3>${item.name}</h3>
+<p>₹${item.price}</p>
+</div>
+`
+
+})
+
+</script>
+
+</body>
+</html>
