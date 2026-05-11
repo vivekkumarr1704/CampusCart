@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>CampusCart</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>CampusCart</h1>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="feedback.html">Feedback</a>
+<a href="cart.html" id="cartCount">Cart (0)</a>
+<a href="orders.html">Orders</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<h2>Buy, Sell & Rent Easily On Campus</h2>
+
+<p>Bicycles • Books • Premium Clothes</p>
+
+</section>
+
+<section class="categories">
+
+<div class="card">
+<img src="images/cycle1.jpg">
+<h3>Cycles</h3>
+<button onclick="showProducts('cycle')">Explore</button>
+</div>
+
+<div class="card">
+<img src="images/book1.jpg">
+<h3>Books</h3>
+<button onclick="showProducts('book')">Explore</button>
+</div>
+
+<div class="card">
+<img src="images/cloth1.jpg">
+<h3>Premium Clothes</h3>
+<button onclick="showProducts('cloth')">Explore</button>
+</div>
+
+</section>
+
+<section id="products"></section>
+
+<footer>
+<p style="text-align:center;color:white;padding:20px">
+CampusCart © 2026 | Made for Students
+</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>
